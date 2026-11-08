@@ -1,3 +1,5 @@
+(* use_dsp = "yes" *)
+
 module mac(
     input clk,rst,shift,sw_in,
     input signed [7:0] a_in, w_in,
