@@ -1,4 +1,5 @@
 import numpy as np 
+import sys
 
 def pack(values, bits):
     word = 0
@@ -11,7 +12,9 @@ def write_hex(name, rows, bits):
         for r in rows:
             f.write(pack(r, bits) + "\n")
 
-N, T = 10, 1000                 
+N = 10
+T = int(sys.argv[1]) if len(sys.argv) > 1 else 1000   
+            
 L = 3*N + 2                  
 rng = np.random.default_rng(2026)
 
